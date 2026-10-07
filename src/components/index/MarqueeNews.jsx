@@ -10,12 +10,14 @@ const MarqueeNews = async () => {
 
   return (
     <div className="z-50 mt-5 sticky top-0 whitespace-nowrap bg-[#9F0712] text-white py-1">
-
       <Marquee speed={100}>
         {news?.map((item, index) => (
           <div key={index} className="py-2">
             <div className="flex gap-5 items-center">
-              <Link href={`/news/${item.id}`} className="ml-5 hover:underline cursor-pointer">
+              <Link
+                href={`/news/${item.id}`}
+                className="ml-5 hover:underline cursor-pointer"
+              >
                 {item.title}
               </Link>
               <GoDotFill className="inline-block text-red-500" />
