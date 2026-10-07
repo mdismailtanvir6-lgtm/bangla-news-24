@@ -33,7 +33,7 @@ const UserInfo = () => {
 
           <h2>{user?.name}</h2>
 
-          <button onClick={handleSignout} className="btn btn-error btn-xs">
+          <button onClick={handleSignout} className="btn btn-md bg-[#9F0712] text-white">
             Signout
           </button>
         </div>

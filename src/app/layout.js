@@ -1,7 +1,8 @@
 import { Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
+import Header from "../components/layout/Header";
 import { Toaster } from "react-hot-toast";
+import MarqueeNews from "../components/index/MarqueeNews";
 
 const notoSerifBengali = Noto_Serif_Bengali({
   subsets: ["latin", "bengali"],
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full">
         <Header />
+        <MarqueeNews />
         <main className="max-w-7xl mx-auto flex-1">{children}</main>
         <Toaster />
       </body>
