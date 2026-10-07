@@ -9,7 +9,7 @@ const MarqueeNews = async () => {
   const news = data.data;
 
   return (
-    <div className="mt-5 sticky top-0 whitespace-nowrap bg-[#9F0712] py-1">
+    <div className="z-50 mt-5 sticky top-0 whitespace-nowrap bg-[#9F0712] text-white py-1">
 
       <Marquee speed={100}>
         {news?.map((item, index) => (
