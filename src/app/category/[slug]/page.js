@@ -21,7 +21,7 @@ const Page = async ({ params }) => {
   );
 
   return (
-    <div className="mt-10 pb-10">
+    <div className="mt-10 pb-10 px-4">
       <h1 className="mb-5 border-b-2 border-[#C50007] text-2xl font-bold">
         {category?.title || slug}
       </h1>

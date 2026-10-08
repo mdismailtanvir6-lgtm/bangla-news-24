@@ -66,7 +66,7 @@ const NewsSections = async () => {
   return (
     <div>
       {publicableNews.map((section) => (
-        <section key={section.id} className="mt-10 pb-10">
+        <section key={section.id} className="mt-10 pb-10 px-4">
           <h2 className="mb-5 border-b-2 border-[#C50007] text-2xl font-bold">
             {section.title}
           </h2>
