@@ -7,15 +7,15 @@ const NewsCard = ({ news }) => {
   const publishedDate = new Date(lastPublished);
 
   return (
-    <Link href={`/news/${news.id}`} className="card bg-base-100 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-      <figure className="relative h-52 w-full">
+    <Link href={`/news/${news.id}`} className="card bg-base-100 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-md">
+      <figure className="relative  w-full">
         {imageUrl ? (
           <img
             src={imageUrl}
             alt={title}
             fill
             className="object-cover"
-            sizes="(max-width: 768px) 100vw, 33vw"
+            sizes="(max-width: 768px)"
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-base-200">
