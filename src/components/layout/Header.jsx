@@ -1,6 +1,6 @@
 import Image from "next/image";
 import NavLinks from "./NavLinks";
-import UserInfo from "../UserInfo";
+import UserInfo from "../user/UserInfo";
 
 
 const Header = () => {

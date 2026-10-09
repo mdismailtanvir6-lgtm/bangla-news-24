@@ -3,7 +3,6 @@
 import { signOut, useSession } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
-import { ImGlass } from "react-icons/im";
 
 const UserInfo = () => {
   const { data: session } = useSession();
@@ -23,8 +22,7 @@ const UserInfo = () => {
                 <img
                   width={40}
                   height={40}
-                  //   alt="User Avatar"
-                  alt="Tailwind-CSS-Avatar-component"
+                    alt="User Avatar"
                   src={user?.image}
                 />
               </div>
