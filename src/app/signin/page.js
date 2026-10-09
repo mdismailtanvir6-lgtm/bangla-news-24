@@ -1,5 +1,6 @@
 "use client";
 
+import SocialsSignIn from "@/components/auth/socials/SocialsSignIn";
 import { signIn } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 import toast from "react-hot-toast";
@@ -23,36 +24,6 @@ const SignInPage = () => {
 
     if (error) {
       toast.error("Sign in failed! Something went wrong!");
-    }
-  };
-
-  const handleGoogleSignIn = async () => {
-    await signIn.social({
-      provider: "google",
-    });
-
-    if (data) {
-      toast.success("Sign In successfull!");
-      // redirect("/");
-    }
-
-    if (error) {
-      toast.error("Something went wrong!");
-    }
-  };
-
-  const handleGithubSignIn = async () => {
-    await signIn.social({
-      provider: "github",
-    });
-
-    if (data) {
-      toast.success("Sign In successfull!");
-      redirect("/");
-    }
-
-    if (error) {
-      toast.error("Something went wrong!");
     }
   };
 
@@ -84,14 +55,7 @@ const SignInPage = () => {
       </form>
 
       {/* ===== sign in with socails ======= */}
-      <div className="mt-5 flex flex-col gap-3">
-        <button onClick={handleGoogleSignIn} className="btn ">
-          Sign In With Google
-        </button>
-        <button onClick={handleGithubSignIn} className="btn ">
-          Sign In With Github
-        </button>
-      </div>
+      <SocialsSignIn />
     </div>
   );
 };
