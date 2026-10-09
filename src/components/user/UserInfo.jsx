@@ -22,7 +22,7 @@ const UserInfo = () => {
                 <img
                   width={40}
                   height={40}
-                    alt="User Avatar"
+                  alt="User Avatar"
                   src={user?.image}
                 />
               </div>
@@ -31,8 +31,11 @@ const UserInfo = () => {
 
           <h2>{user?.name}</h2>
 
-          <button onClick={handleSignout} className="btn btn-md bg-[#9F0712] text-white">
-            Signout
+          <button
+            onClick={handleSignout}
+            className="btn btn-md bg-[#9F0712] text-white"
+          >
+            সাইন আউট
           </button>
         </div>
       ) : (

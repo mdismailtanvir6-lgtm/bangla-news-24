@@ -23,7 +23,7 @@ const UpdateUser = ({ showUpdate, setShowUpdate }) => {
     }
   };
   return (
-    <div className="flex flex-col items-center justify-center my-10">
+    <div className="flex flex-col items-center justify-center p-5 rounded-md my-10 bg-white">
       <h2 className="text-2xl font-bold text-red-700"> আপডেট প্রোফাইল</h2>
       <form onSubmit={onSubmit}>
         <fieldset className="fieldset   rounded-box w-md">
