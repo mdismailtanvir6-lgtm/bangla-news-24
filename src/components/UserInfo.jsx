@@ -3,11 +3,11 @@
 import { signOut, useSession } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
+import { ImGlass } from "react-icons/im";
 
 const UserInfo = () => {
   const { data: session } = useSession();
   const user = session?.user;
-  console.log(user);
 
   const handleSignout = async () => {
     await signOut();
@@ -20,7 +20,7 @@ const UserInfo = () => {
           <Link href={"/profile"}>
             <div className="avatar">
               <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
-                <Image
+                <img
                   width={40}
                   height={40}
                   //   alt="User Avatar"

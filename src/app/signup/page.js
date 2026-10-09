@@ -1,8 +1,9 @@
 "use client";
 
-import { authClient } from "@/lib/auth-client";
+import { signUp, signIn } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 import React from "react";
+import toast from "react-hot-toast";
 
 const SignUpPage = () => {
   const onSubmit = async (e) => {
@@ -11,31 +12,49 @@ const SignUpPage = () => {
     const formData = new FormData(e.target);
     const user = Object.fromEntries(formData.entries());
 
-    const { data, error } = await authClient.signUp.email({
+    const { data, error } = await signUp.email({
       ...user,
-      callbackURL: "/",
+      // callbackURL: "/",    "this is not working!"
     });
 
     if (data) {
-      console.log(data);
+      toast.success("Sign Up successfull!");
       redirect("/");
     }
 
     if (error) {
-      console.log(error);
+      toast.error("Sign up failed! Something went wrong!");
     }
   };
 
   const handleGoogleSignIn = async () => {
-    await authClient.signIn.social({
+    await signIn.social({
       provider: "google",
     });
+
+    if (data) {
+      toast.success("Sign In successfull!");
+      redirect("/");
+    }
+
+    if (error) {
+      toast.error("Something went wrong!");
+    }
   };
 
   const handleGithubSignIn = async () => {
-    await authClient.signIn.social({
+    await signIn.social({
       provider: "github",
     });
+
+    if (data) {
+      toast.success("Sign In successfull!");
+      redirect("/");
+    }
+
+    if (error) {
+      toast.error("Something went error!");
+    }
   };
 
   return (
